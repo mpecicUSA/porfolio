@@ -1,0 +1,23 @@
+{
+  "name": "portolio",
+  "version": "1.0.0",
+  "description": "Marko Pecic's Portfolio",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpecicUSA/porfolio.git"
+  },
+  "author": "Marko Pecic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mpecicUSA/porfolio/issues"
+  },
+  "homepage": "https://github.com/mpecicUSA/porfolio#readme"
+}
