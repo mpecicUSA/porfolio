@@ -1,44 +1,91 @@
-*{
-    font-family: 'Lato';
-    background-color: "black";
-}
-.container {
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-start;
-    /* container margin for space away from walls */
-    margin: 10% 0;
-    margin-bottom: 5%;
-}
-.container2 {
-    flex-direction: row; 
-    align-content: space-evenly;
-}
-a{
-    color: inherit;
-}
-img {
-    margin: 5%;
-    max-width: 300px;
-    max-height: 300px; 
-    margin-bottom: 10em;
-}
-/* Behing IMG DIV use blend of Marine and feather #57BC90 #77c9D4 */
+/* min-width 700 used for larger screens  */
+@media screen and (min-width: 1200px) {
+    *{
+        font-family: 'Lato';
 
-.behindImg{
+    }
+    .container {
+        display: flex; 
+        flex-direction: row; 
+        /* container margin for space away from walls */
+        /* margin updated for larger screen size so top white space doesnt become too much  */
+        margin: 0;
+        padding: 0;  
+        height: 100vh; 
+
+    }
+    .contact {
+        flex-direction: row; 
+    }
+    .behindImg{
+        width: 70%;
+        background-image:
+            linear-gradient(
+                #57BC90,
+                #77c9D4
+            ) 
+    }
+    a{
+        color: inherit;
+
+    }
+    img {
+        margin: 5%;
+        max-width: 300px;
+        max-height: 300px; 
+        margin-bottom: 10em;
+    }
     
-    display: flex; 
-    justify-content: space-around;
-    width: 100%;
-    color: white;
-    background-image:
-        linear-gradient(
-            #57BC90,
-            #77c9D4
-        ) 
+    
+    
+    .innerContainer {
+        margin: 5%; 
+    }
+    i {
+        margin: 0 15px 0 0 ;
+    }
 }
-
-.innerContainer {
-    margin: 5%; 
-    max-Width: 800px; 
+/* max-width 700px used for smaller screens  */
+@media screen and (max-width: 1200px){
+    *{
+        font-family: 'Lato';
+    }
+    .container {
+        display: flex; 
+        flex-direction: column; 
+        align-items: flex-start;
+        /* container margin for space away from walls */
+        margin: 0;
+        height: 100%
+    }
+    .container2 {
+        flex-direction: row; 
+        align-content: space-evenly;
+    }
+    a{
+        color: inherit;
+    }
+    img {
+        margin: 5%;
+        max-width: 300px;
+        max-height: 300px; 
+        margin-bottom: 10em;
+    }
+    /* Behing IMG DIV use blend of Marine and feather #57BC90 #77c9D4 */
+    
+    .behindImg{
+        display: flex; 
+        justify-content: space-around;
+        width: 100%;
+        color: white;
+        background-image:
+            linear-gradient(
+                #57BC90,
+                #77c9D4
+            ) 
+    }
+    .innerContainer {
+        margin: 5%; 
+        max-Width: 800px; 
+    }
 }
