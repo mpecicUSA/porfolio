@@ -7,7 +7,7 @@
         /* margin updated for larger screen size so top white space doesnt become too much  */
         margin: 0;
         padding: 0;  
-        height: 100vh; 
+        height: 140vh; 
 
     }
     .behindImg{
@@ -17,13 +17,11 @@
                 #57BC90,
                 #77c9D4
             ) ;
-        min-height: 100vh;
+        min-height: 140vh;
     }
     .innerContainer {
-        margin-left: 3%; 
-    }
-    i {
-        margin: 0 15px 0 0 ;
+        padding-left: 3%; 
+        background:rgb(250, 242, 240); 
     }
 }
 /* max-width used for smaller screens  */
@@ -47,16 +45,23 @@
         color: white;
         background-image:
             linear-gradient(
-                #57BC90,
-                #77c9D4
+                #77c9D4,
+                #57BC90
             ) 
     }
     .innerContainer {
-        margin: 5%; 
-        max-Width: 800px; 
+        padding: 2em;
+        background:rgb(250, 242, 240); 
+
     }
     .projects{
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
+        display:flex; 
+        flex-direction: column;
+
+    }
+    .projectCard{
+        align-self: flex-start
     }
 }
 
@@ -67,29 +72,70 @@
 .contact {
     flex-direction: row; 
 }
-.projects{ 
-    display: flex; 
+.about{
+    max-width: 60%;
 }
+.projects{ 
+    display: flex;
+    align-content: center;
+    width:80%;
+}
+
 .projectCard{
+    box-shadow: 5px 10px 8px #888888;
+    display:flex;
+    justify-content: center;
     margin: 1em;
-    width: 10em; 
+    width: 20em; 
     height: 10em; 
+    border-radius: 15px 50px;
+    color:rgb(250, 242, 240); 
     background-image:
     linear-gradient(
-        #57BC90,
+        #57BC90 80%,
         #77c9D4
-    ) ;
+    ) ; 
+    -webkit-transition: width .4s linear, height .4s linear;
+    -moz-transition: width .4s linear, height .4s linear;
+    -o-transition: width .4s linear, height .4s linear;
+    transition: width .4s linear, height .4s linear;
+
 }
 .projectCard:hover {
-    background: rgb(1, 35, 107);
-    color: white;
+    width: 30em;
+    height: 25em; 
+    -webkit-transition: width .7 linear, height .7 linear;
+    -moz-transition: width .7 linear, height .7 linear;
+    -o-transition: width .7 linear, height .7 linear;
+    transition: width .7 linear, height .7 linear;
 }
+.projectContents{
+    margin: 1em;
+    align-content: center;
+}
+
+.projectCard .hovering{
+    opacity: 0; 
+}
+
+.projectCard:hover .hovering{
+    opacity: 1; 
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s ;
+    -o-transition: opacity 1s ;
+    transition: opacity 1s ;
+}
+
 a{
     color: inherit;
 }
 img {
-    margin: 5%;
+    border-radius: 15px 50px;
+    margin: 3em 5em 0em 5em;
     max-width: 300px;
     max-height: 300px; 
     margin-bottom: 10em;
+}
+i {
+    margin: 0 15px 0 0 ;
 }
