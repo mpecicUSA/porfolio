@@ -7,21 +7,22 @@
         /* margin updated for larger screen size so top white space doesnt become too much  */
         margin: 0;
         padding: 0;  
-        height: 140vh; 
+        height: 120vh; 
 
     }
     .behindImg{
         width: 70%;
         background-image:
             linear-gradient(
-                #57BC90,
+                #455A64,
                 #77c9D4
             ) ;
-        min-height: 140vh;
+        min-height: 120vh;
     }
     .innerContainer {
         padding-left: 3%; 
         background:rgb(250, 242, 240); 
+        min-width: 70%;
     }
 }
 /* max-width used for smaller screens  */
@@ -45,8 +46,8 @@
         color: white;
         background-image:
             linear-gradient(
-                #77c9D4,
-                #57BC90
+                #455A64,
+                #77c9D4
             ) 
     }
     .innerContainer {
@@ -83,17 +84,17 @@
 
 .projectCard{
     box-shadow: 5px 10px 8px #888888;
+    color:rgb(250, 242, 240); 
     display:flex;
     justify-content: center;
     margin: 1em;
     width: 20em; 
     height: 10em; 
-    border-radius: 15px 50px;
-    color:rgb(250, 242, 240); 
+    border-radius: 15px 50px; 
     background-image:
     linear-gradient(
-        #57BC90 80%,
-        #77c9D4
+        #455A64 40%,
+                #77c9D4
     ) ; 
     -webkit-transition: width .4s linear, height .4s linear;
     -moz-transition: width .4s linear, height .4s linear;
@@ -115,10 +116,12 @@
 }
 
 .projectCard .hovering{
+    font-size: 1px;
     opacity: 0; 
 }
 
 .projectCard:hover .hovering{
+    font-size: 1em; 
     opacity: 1; 
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s ;
