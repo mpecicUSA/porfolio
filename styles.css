@@ -5,13 +5,13 @@
 .contact {
 flex-direction: row; 
 }
-.about{
+.about p{
 max-width: 60%;
 }
 .projects{ 
 display: flex;
 align-content: center;
-width:80%;
+width:90%;
 }
 
 .projectCard{
@@ -21,26 +21,26 @@ display:flex;
 justify-content: center;
 margin: 1em;
 width: 20em; 
-height: 10em; 
-border-radius: 15px 50px; 
+height: 12em; 
+border-radius: 50px 15px; 
 background-image:
 linear-gradient(
     #455A64 40%,
             #77c9D4
 ) ; 
--webkit-transition: width .4s linear, height .4s linear;
--moz-transition: width .4s linear, height .4s linear;
--o-transition: width .4s linear, height .4s linear;
-transition: width .4s linear, height .4s linear;
+-webkit-transition: width .2s linear, height .2s linear;
+-moz-transition: width .2s linear, height .2s linear;
+-o-transition: width .2s linear, height .2s linear;
+transition: width .2s linear, height .2s linear;
 
 }
 .projectCard:hover {
 width: 30em;
 height: 20em; 
--webkit-transition: width .7 linear, height .7 linear;
--moz-transition: width .7 linear, height .7 linear;
--o-transition: width .7 linear, height .7 linear;
-transition: width .7 linear, height .7 linear;
+-webkit-transition: width .2s linear, height .2s linear;
+-moz-transition: width .2s linear, height .2s linear;
+-o-transition: width .2s linear, height .2s linear;
+transition: width .2s linear, height .2s linear;
 }
 .projectContents{
 margin: 1em;
@@ -66,10 +66,9 @@ color: inherit;
 }
 img {
 border-radius: 15px 50px;
-margin: 3em 5em 0em 5em;
+margin: 3em;
 max-width: 300px;
 max-height: 300px; 
-margin-bottom: 10em;
 }
 i {
 margin: 0 15px 0 0 ;
@@ -77,7 +76,27 @@ margin: 0 15px 0 0 ;
 p + p{
 margin-bottom: 1em; 
 }
+h3{
+    background-image:
+            linear-gradient( 
+                to left,
+                #455A64,
+                #77c9D4
+            ) ;
+            opacity: .8;
+    width: 80%;
+}
 /* max-width used for smaller screens  */
+@media screen and (max-width: 500px){
+    .projectCard{
+        flex-direction: column;
+        width: 10em;
+    }
+    .projectCard:hover{
+        width: 10em; 
+        height: 40em;
+    }
+}
 @media screen and (max-width: 1000px){
     .container {
         display: flex; 
@@ -86,7 +105,7 @@ margin-bottom: 1em;
         /* container margin for space away from walls */
         margin: 0;
         height: 100%;
-        width: 130vw;
+        width: 100vw;
     }
     .container2 {
         flex-direction: row; 
@@ -95,7 +114,7 @@ margin-bottom: 1em;
     .behindImg{
         display: flex; 
         justify-content: space-around;
-        width: 130vw;
+        width: 100vw;
         color: white;
         background-image:
             linear-gradient(
@@ -148,10 +167,6 @@ margin-bottom: 1em;
     .projectCard:hover {
         width: 30em;
         height: 25em;
-        -webkit-transition: width .7 linear, height .7 linear;
-        -moz-transition: width .7 linear, height .7 linear;
-        -o-transition: width .7 linear, height .7 linear;
-        transition: width .7 linear, height .7 linear;
     }
 }
 /* medium screens */
@@ -165,12 +180,8 @@ margin-bottom: 1em;
             min-height: 160vh;
         }
         .projectCard:hover {
-            width: 30em;
+            width: 35em;
             height: 30em;
-            -webkit-transition: width .7 linear, height .7 linear;
-            -moz-transition: width .7 linear, height .7 linear;
-            -o-transition: width .7 linear, height .7 linear;
-            transition: width .7 linear, height .7 linear;
         }
     }
 }
