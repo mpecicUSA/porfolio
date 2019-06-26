@@ -34,7 +34,7 @@ linear-gradient(
 transition: width .2s linear, height .2s linear;
 
 }
-.projectCard:hover {
+.projectCard:hover, .projectCard:active {
 width: 30em;
 height: 20em; 
 -webkit-transition: width .2s linear, height .2s linear;
@@ -52,7 +52,7 @@ font-size: 1px;
 opacity: 0; 
 }
 
-.projectCard:hover .hovering{
+.projectCard:hover .hovering, .projectCard:active .hovering{
 font-size: 1em; 
 opacity: 1; 
 -webkit-transition: opacity 1s;
@@ -92,7 +92,7 @@ h3{
         flex-direction: column;
         width: 10em;
     }
-    .projectCard:hover{
+    .projectCard:hover, .projectCard:active{
         width: 10em; 
         height: 40em;
     }
@@ -164,7 +164,7 @@ h3{
         background:rgb(250, 242, 240); 
         min-width: 70%;
     }
-    .projectCard:hover {
+    .projectCard:hover, .projectCard:active {
         width: 30em;
         height: 25em;
     }
