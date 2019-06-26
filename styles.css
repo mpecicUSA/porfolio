@@ -1,63 +1,84 @@
-/* min-width  used for larger screens  */
-@media screen and (min-width: 1000px) {
-    .container {
-        display: flex; 
-        flex-direction: row; 
-        /* container margin for space away from walls */
-        /* margin updated for larger screen size so top white space doesnt become too much  */
-        margin: 0;
-        padding: 0;  
-        height: 120vh; 
-
-    }
-    .behindImg{
-        width: 70%;
-        background-image:
-            linear-gradient(
-                #455A64,
-                #77c9D4
-            ) ;
-        min-height: 120vh;
-    }
-    .innerContainer {
-        padding-left: 3%; 
-        background:rgb(250, 242, 240); 
-        min-width: 70%;
-    }
+/* UNIVERSAL STYLING */
+*{
+    font-family: 'Lato';
+}
+.contact {
+flex-direction: row; 
+}
+.about{
+max-width: 60%;
+}
+.projects{ 
+display: flex;
+align-content: center;
+width:80%;
 }
 
-@media screen and (min-width: 875px)  {
-    @media screen and (max-width: 1000px){
-        .projectCard{
-            box-shadow: 5px 10px 8px #888888;
-            color:rgb(250, 242, 240); 
-            display:flex;
-            justify-content: center;
-            margin: 1em;
-            width: 20em; 
-            height: 10em; 
-            border-radius: 15px 50px; 
-            background-image:
-            linear-gradient(
-                #455A64 40%,
-                        #77c9D4
-            ) ; 
-            -webkit-transition: width .4s linear, height .4s linear;
-            -moz-transition: width .4s linear, height .4s linear;
-            -o-transition: width .4s linear, height .4s linear;
-            transition: width .4s linear, height .4s linear;
-        }
-        .projectCard:hover {
-            width: 30em;
-            -webkit-transition: width .7 linear, height .7 linear;
-            -moz-transition: width .7 linear, height .7 linear;
-            -o-transition: width .7 linear, height .7 linear;
-            transition: width .7 linear, height .7 linear;
-        }
-    }
+.projectCard{
+box-shadow: 5px 10px 8px #888888;
+color:rgb(250, 242, 240); 
+display:flex;
+justify-content: center;
+margin: 1em;
+width: 20em; 
+height: 10em; 
+border-radius: 15px 50px; 
+background-image:
+linear-gradient(
+    #455A64 40%,
+            #77c9D4
+) ; 
+-webkit-transition: width .4s linear, height .4s linear;
+-moz-transition: width .4s linear, height .4s linear;
+-o-transition: width .4s linear, height .4s linear;
+transition: width .4s linear, height .4s linear;
+
+}
+.projectCard:hover {
+width: 30em;
+height: 20em; 
+-webkit-transition: width .7 linear, height .7 linear;
+-moz-transition: width .7 linear, height .7 linear;
+-o-transition: width .7 linear, height .7 linear;
+transition: width .7 linear, height .7 linear;
+}
+.projectContents{
+margin: 1em;
+align-content: center;
+}
+
+.projectCard .hovering{
+font-size: 1px;
+opacity: 0; 
+}
+
+.projectCard:hover .hovering{
+font-size: 1em; 
+opacity: 1; 
+-webkit-transition: opacity 1s;
+-moz-transition: opacity 1s ;
+-o-transition: opacity 1s ;
+transition: opacity 1s ;
+}
+
+a{
+color: inherit;
+}
+img {
+border-radius: 15px 50px;
+margin: 3em 5em 0em 5em;
+max-width: 300px;
+max-height: 300px; 
+margin-bottom: 10em;
+}
+i {
+margin: 0 15px 0 0 ;
+}
+p + p{
+margin-bottom: 1em; 
 }
 /* max-width used for smaller screens  */
-@media screen and (max-width: 875px){
+@media screen and (max-width: 1000px){
     .container {
         display: flex; 
         flex-direction: column; 
@@ -96,85 +117,63 @@
         align-self: flex-start
     }
 }
+/* min-width  used for larger screens  */
 
+@media screen and (min-width: 1001px) {
+    .container {
+        display: flex; 
+        flex-direction: row; 
+        /* container margin for space away from walls */
+        /* margin updated for larger screen size so top white space doesnt become too much  */
+        margin: 0;
+        padding: 0;  
+        height: 140vh; 
 
-
-/* UNIVERSAL STYLING */
-*{
-        font-family: 'Lato';
     }
-.contact {
-    flex-direction: row; 
-}
-.about{
-    max-width: 60%;
-}
-.projects{ 
-    display: flex;
-    align-content: center;
-    width:80%;
-}
-
-.projectCard{
-    box-shadow: 5px 10px 8px #888888;
-    color:rgb(250, 242, 240); 
-    display:flex;
-    justify-content: center;
-    margin: 1em;
-    width: 20em; 
-    height: 10em; 
-    border-radius: 15px 50px; 
-    background-image:
-    linear-gradient(
-        #455A64 40%,
+    .behindImg{
+        width: 70%;
+        background-image:
+            linear-gradient(
+                #455A64,
                 #77c9D4
-    ) ; 
-    -webkit-transition: width .4s linear, height .4s linear;
-    -moz-transition: width .4s linear, height .4s linear;
-    -o-transition: width .4s linear, height .4s linear;
-    transition: width .4s linear, height .4s linear;
+            ) ;
+        min-height: 140vh;
+    }
+    .innerContainer {
+        padding-left: 3%; 
+        background:rgb(250, 242, 240); 
+        min-width: 70%;
+    }
+    .projectCard:hover {
+        width: 30em;
+        height: 25em;
+        -webkit-transition: width .7 linear, height .7 linear;
+        -moz-transition: width .7 linear, height .7 linear;
+        -o-transition: width .7 linear, height .7 linear;
+        transition: width .7 linear, height .7 linear;
+    }
+}
+/* medium screens */
+@media screen and (min-width: 1000px)  {
+    @media screen and (max-width: 1250px){
+        .container {
+            height: 160vh; 
+    
+        }
+        .behindImg{
+            min-height: 160vh;
+        }
+        .projectCard:hover {
+            width: 30em;
+            height: 30em;
+            -webkit-transition: width .7 linear, height .7 linear;
+            -moz-transition: width .7 linear, height .7 linear;
+            -o-transition: width .7 linear, height .7 linear;
+            transition: width .7 linear, height .7 linear;
+        }
+    }
+}
 
-}
-.projectCard:hover {
-    width: 30em;
-    height: 25em; 
-    -webkit-transition: width .7 linear, height .7 linear;
-    -moz-transition: width .7 linear, height .7 linear;
-    -o-transition: width .7 linear, height .7 linear;
-    transition: width .7 linear, height .7 linear;
-}
-.projectContents{
-    margin: 1em;
-    align-content: center;
-}
 
-.projectCard .hovering{
-    font-size: 1px;
-    opacity: 0; 
-}
 
-.projectCard:hover .hovering{
-    font-size: 1em; 
-    opacity: 1; 
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s ;
-    -o-transition: opacity 1s ;
-    transition: opacity 1s ;
-}
 
-a{
-    color: inherit;
-}
-img {
-    border-radius: 15px 50px;
-    margin: 3em 5em 0em 5em;
-    max-width: 300px;
-    max-height: 300px; 
-    margin-bottom: 10em;
-}
-i {
-    margin: 0 15px 0 0 ;
-}
-p + p{
-    margin-bottom: 1em; 
-}
